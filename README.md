@@ -1,19 +1,19 @@
 # 🚀 IntelliOrbit Pro — Full-Stack Multi-Agent Intelligent Assistant Platform 🧠⚡
 
-> **A Privacy-First, Offline Multi-Agent Orchestration Platform built using ADK-inspired architecture and Model Context Protocol (MCP) principles.**
+An offline-first intelligent assistant platform built using ADK-inspired multi-agent orchestration and Model Context Protocol (MCP) architecture.
 
 ---
 
-# 🌐 Live Environment
+## 🌐 Live Environment
 
-## 🚀 Runs Completely Offline
+### 🚀 Runs Completely Offline
 
-✅ No API keys required  
-✅ No cloud dependency  
-✅ No external AI services  
-✅ No internet connection required
+- ✅ No API keys required
+- ✅ No cloud dependency
+- ✅ No external AI services
+- ✅ No internet connection required
 
-⚠️ The entire system executes locally on your machine.
+⚠️ Entire system executes locally on your machine.
 
 ---
 
@@ -29,8 +29,6 @@ The platform leverages:
 - Interactive dashboard visualization
 - Fully offline deployment
 
-Built with a modern React dashboard and FastAPI backend, IntelliOrbit Pro demonstrates how collaborative AI agents can automate planning, learning, and productivity workflows without relying on cloud services.
-
 ---
 
 # ✨ Key Features
@@ -45,253 +43,104 @@ IntelliOrbit Pro coordinates multiple specialized agents:
 - 📅 Personal Schedule Management Agent
 - 🎯 Root Orchestrator Agent
 
----
-
-## 📊 Interactive Dashboard
-
-- Agent monitoring panel
-- Pipeline execution history
-- Live orchestration visualization
-- Execution log viewer
-- Real-time agent status updates
-
----
-
-## 🔗 MCP Tool Integration
-
-- Local MCP server
-- Tool discovery
-- Tool invocation
-- Structured tool execution
-- Agent-to-tool communication
-
----
-
-## 🔒 Privacy-First Architecture
-
-- Fully local execution
-- No external APIs
-- No cloud storage
-- Secure sandbox execution
-
----
-
-# 🧠 ADK-Inspired Multi-Agent Workflow
-
-IntelliOrbit Pro implements a hierarchical orchestration architecture:
-
-```text
-                    👤 User
-                       │
-                       ▼
-             🎯 Root Orchestrator
-                       │
-        ┌──────────────┼──────────────┐
-        ▼              ▼              ▼
- 🧠 Strategic      ⚡ Workflow      📚 Learning
- Planning          Optimization     Assistant
- Agent             Agent            Agent
-        │              │              │
-        └──────────────┼──────────────┘
-                       ▼
-              📅 Schedule Manager
-                       │
-                       ▼
-                📊 Final Workspace
-```
-
----
-
-# 🤖 Agent Responsibilities
-
-## 🎯 Root Orchestrator
-
-Responsibilities:
-
-- Parse user goals
-- Build execution pipelines
-- Delegate tasks
-- Coordinate agent collaboration
-- Aggregate final results
-
----
-
-## 🧠 Strategic Planning Agent
-
-Responsibilities:
-
-- Break down objectives
-- Create milestone plans
-- Generate action workflows
-
-Tool:
-
-```text
-create_action_plan
-```
-
----
-
-## ⚡ Workflow Optimization Agent
-
-Responsibilities:
-
-- Optimize execution order
-- Detect bottlenecks
-- Introduce parallel execution
-
-Tool:
-
-```text
-optimize_task_sequence
-```
-
----
-
-## 📚 Learning & Exam Assistant Agent
-
-Responsibilities:
-
-- Generate study plans
-- Build flashcards
-- Create learning strategies
-
-Tools:
-
-```text
-parse_learning_material
-generate_study_guide
-```
-
----
-
-## 📅 Personal Schedule Management Agent
-
-Responsibilities:
-
-- Schedule activities
-- Resolve conflicts
-- Generate calendar timelines
-
-Tools:
-
-```text
-schedule_slot
-list_calendar_events
-```
-
----
-
-# 🔌 MCP Server Architecture
-
-IntelliOrbit Pro implements a local Model Context Protocol (MCP) server architecture.
-
-Available MCP tools:
-
-```text
-🛠 mcp_create_action_plan()
-
-⚡ mcp_optimize_sequence()
-
-📚 mcp_generate_flashcards()
-
-📅 mcp_schedule_calendar_event()
-```
-
 Features:
 
-- Structured tool communication
-- Local tool execution
+- Agent orchestration panel
+- Pipeline execution history
+- Live execution logs
+- Agent status monitoring
+
+---
+
+## 🔌 MCP Server Integration
+
+The platform implements MCP-inspired tool communication.
+
+### Available Tools
+
+- create_action_plan()
+- optimize_task_sequence()
+- generate_study_guide()
+- schedule_calendar_event()
+
+Capabilities:
+
+- Tool invocation
+- Tool execution logging
+- Structured communication
 - Agent-to-tool interaction
-- Secure execution environment
-- Offline operation
 
 ---
 
-# 🔒 Security Architecture
+## 🔒 Security Architecture
 
-Security is implemented as a first-class component.
+Implemented security mechanisms:
 
-## 🛡️ Input Validation
-
-- Pydantic schemas
-- Type validation
-- Length restrictions
-- Boundary checks
-
----
-
-## 🔐 Permission Controls
-
-- User approval for critical actions
-- Restricted execution policies
-- Role-based access checks
+- Input validation using Pydantic
+- Permission control
+- Safe local execution
+- Restricted workspace access
+- Secure localhost deployment
 
 ---
 
-## 🏠 Safe Execution Sandbox
+## 🧠 Multi-Agent Workflow
 
-- Local workspace isolation
-- Restricted file operations
-- Safe subprocess execution
-
----
-
-## ⚠️ Exception Handling
-
-- Structured error reporting
-- Failure recovery
-- Execution auditing
+```text
+              User
+                │
+                ▼
+        Root Orchestrator
+                │
+      ┌─────────┼─────────┐
+      ▼         ▼         ▼
+ Strategic   Workflow   Learning
+ Planning   Optimizer   Assistant
+      │         │         │
+      └─────────┼─────────┘
+                ▼
+        Schedule Manager
+                │
+                ▼
+          Final Output
+```
 
 ---
 
 # 🏗 System Architecture
 
 ```text
-                +------------------------+
-                | React Frontend (Vite)  |
-                +------------+-----------+
-                             |
-                             ▼
-                +------------------------+
-                | FastAPI Backend        |
-                +------------+-----------+
-                             |
-                             ▼
-                +------------------------+
-                | Root Orchestrator      |
-                +------------+-----------+
-                             |
-         ------------------------------------------
-         |               |              |          |
-         ▼               ▼              ▼          ▼
-  Strategic      Workflow       Learning    Schedule
-   Agent          Agent          Agent       Agent
-         ------------------------------------------
-                             |
-                             ▼
-                    +------------------+
-                    | MCP Server       |
-                    +------------------+
-                             |
-                             ▼
-                       SQLite Database
+React Frontend
+       │
+       ▼
+FastAPI Backend
+       │
+       ▼
+Root Orchestrator
+       │
+       ▼
+Multi-Agent Runtime
+       │
+       ▼
+MCP Server
+       │
+       ▼
+SQLite Database
 ```
 
 ---
 
-# 🛠 Technology Stack
+# 🛠 Tech Stack
 
 | Layer | Technology |
-|-------|------------|
+|--------|------------|
 | Frontend | React + Vite |
-| Backend | Python + FastAPI |
-| Agent Framework | ADK-inspired architecture |
-| Protocol | MCP |
+| Backend | FastAPI |
 | Database | SQLite |
+| Multi-Agent | ADK-inspired Architecture |
+| Communication | MCP |
 | Validation | Pydantic |
-| Runtime | Uvicorn |
-| Deployment | Localhost |
+| Deployment | Local Offline Environment |
 
 ---
 
@@ -300,71 +149,40 @@ Security is implemented as a first-class component.
 ```text
 IntelliOrbit-Pro/
 
-├── frontend/
-│   ├── src/
-│   ├── public/
-│   └── package.json
+backend/
+├── app/
+│   ├── adk/
+│   ├── cli/
+│   ├── mcp/
+│   ├── agents_config.py
+│   ├── database.py
+│   ├── main.py
+│   └── schemas.py
 │
-├── backend/
-│   ├── app/
-│   │   ├── adk/
-│   │   ├── mcp/
-│   │   ├── cli/
-│   │   ├── database.py
-│   │   ├── schemas.py
-│   │   ├── agents_config.py
-│   │   └── main.py
-│   │
-│   ├── requirements.txt
-│   └── intelliorbit.db
-│
-├── docs/
-│   ├── architecture.md
-│   └── ui_ux_layout.md
-│
+├── requirements.txt
 ├── Dockerfile
-└── README.md
+│
+frontend/
+├── src/
+├── public/
+├── package.json
+│
+docs/
+├── architecture.md
+└── ui_ux_layout.md
 ```
 
 ---
 
 # ⚙️ Installation
 
-## Requirements
-
-- Python 3.11+
-- Node.js
-- npm
-
----
-
-## Clone Repository
-
 ```bash
 git clone https://github.com/Nishtha-06/IntelliOrbit-Pro.git
 
 cd IntelliOrbit-Pro
-```
 
----
+pip install -r backend/requirements.txt
 
-## Backend Setup
-
-```bash
-cd backend
-
-python -m venv .venv
-
-.venv\Scripts\activate
-
-pip install -r requirements.txt
-```
-
----
-
-## Frontend Setup
-
-```bash
 cd frontend
 
 npm install
@@ -372,27 +190,23 @@ npm install
 
 ---
 
-# 🚀 Run IntelliOrbit Pro
-
-## Start Backend
+# ▶️ Run Backend
 
 ```bash
 cd backend
-
-.venv\Scripts\activate
 
 uvicorn app.main:app --reload
 ```
 
 Backend:
 
-```text
+```
 http://localhost:8000
 ```
 
 ---
 
-## Start Frontend
+# ▶️ Run Frontend
 
 ```bash
 cd frontend
@@ -402,139 +216,37 @@ npm run dev
 
 Frontend:
 
-```text
+```
 http://localhost:5173
 ```
 
 ---
 
-# 🎬 End-to-End Workflow Example
+# 🎬 Example Workflow
 
-## User Request
+User request:
 
-```text
-Prepare for Java placement interview in 3 months.
-Create a study roadmap,
-optimize learning sequence,
-prepare mock tests,
-and generate a weekly schedule.
-```
+> Prepare for Java placement interview in 3 months
 
----
+Execution flow:
 
-## Execution Pipeline
-
-```text
-🎯 Root Orchestrator
-        ↓
-🧠 Strategic Planning Agent
-        ↓
-📚 Learning & Exam Assistant Agent
-        ↓
-⚡ Workflow Optimization Agent
-        ↓
-📅 Personal Schedule Management Agent
-        ↓
-📊 Task Synthesis Complete
-```
+1. Root Orchestrator parses objective
+2. Strategic Planning Agent creates milestones
+3. Learning Agent generates study content
+4. Workflow Agent optimizes sequence
+5. Schedule Agent allocates calendar slots
+6. Final execution log displayed
 
 ---
 
-## Console Execution Example
+# 🔒 Offline First
 
-```text
-Root Orchestrator
-Orchestration Pipeline Formed
+- ✅ No OpenAI API
+- ✅ No Gemini API
+- ✅ No cloud services
+- ✅ No internet required
 
-Strategic Planning Agent
-Executing Tool: tool_create_plan_wrapper
-
-Learning & Exam Assistant Agent
-Executing Tool: tool_study_guide_wrapper
-
-Workflow Optimization Agent
-Executing Tool: tool_optimize_wrapper
-
-Personal Schedule Management Agent
-Executing Tool: tool_schedule_wrapper
-
-Task Synthesis Complete
-```
-
----
-
-# 💻 CLI Agent Skills
-
-Available local CLI skills:
-
-```bash
-python cli.py plan
-
-python cli.py optimize
-
-python cli.py study
-
-python cli.py schedule
-
-python cli.py orchestrate
-```
-
----
-
-# 🗄 Database Schema
-
-### tasks
-
-- id
-- title
-- description
-- status
-- created_at
-
-### task_steps
-
-- id
-- task_id
-- agent_name
-- step_title
-- status
-- log_detail
-- timestamp
-
-### calendar_events
-
-- id
-- task_title
-- start_time
-- duration_minutes
-- category
-
----
-
-# 🏆 Kaggle × Google AI Agents Capstone Compliance
-
-| Requirement | Status |
-|-------------|--------|
-| Multi-Agent System | ✅ |
-| ADK Concepts | ✅ |
-| MCP Server | ✅ |
-| Agent Skills | ✅ |
-| Security Features | ✅ |
-| Deployability | ✅ |
-| Offline Execution | ✅ |
-| Full Stack Application | ✅ |
-
----
-
-# 🚀 Future Improvements
-
-- Local LLM integration
-- Persistent memory
-- Voice assistant support
-- Calendar synchronization
-- Autonomous agent planning
-- Knowledge graph integration
-- Multi-user collaboration
+Everything runs locally.
 
 ---
 
@@ -542,20 +254,12 @@ python cli.py orchestrate
 
 **Nishtha Modi**
 
-Built with ❤️ for the **Kaggle × Google AI Agents: Intensive Vibe Coding Capstone Project (2026)**.
+Built for:
+
+**Google × Kaggle AI Agents Capstone Project**
 
 ---
 
-# 📜 License
+# 🚀 Tagline
 
-MIT License
-
----
-
-# ⚡ Final Tagline
-
-> **Think Strategically. Learn Efficiently. Schedule Intelligently.**
->
-> **Powered by Collaborative AI Agents.** 🚀🧠⚡📅
- 
- 
+### Plan Smarter • Learn Faster • Organize Everything
