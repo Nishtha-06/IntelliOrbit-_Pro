@@ -1,6 +1,6 @@
 # 🚀 IntelliOrbit Pro — Full-Stack Multi-Agent Intelligent Assistant Platform 🧠⚡
 
-Offline-first intelligent assistant using Google ADK-inspired multi-agent orchestration and MCP architecture.
+Offline-first intelligent assistant platform using Google ADK-inspired multi-agent orchestration, MCP tools, and secure local execution.
 
 ---
 
