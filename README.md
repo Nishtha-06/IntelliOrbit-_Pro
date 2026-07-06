@@ -143,7 +143,76 @@ SQLite Database
 | Deployment | Local Offline Environment |
 
 ---
+# 🏗️ System Architecture
 
+```mermaid
+flowchart TB
+
+    USER([👤 User Prompt])
+
+    subgraph ADK["ADK Multi-Agent Architecture"]
+
+        ROOT[🎯 Root Orchestrator]
+
+        PLAN[🧠 Strategic Planning Agent]
+
+        OPT[⚡ Workflow Optimization Agent]
+
+        EXAM[📚 Learning & Exam Assistant Agent]
+
+        SCHED[📅 Personal Schedule Management Agent]
+
+        ROOT --> PLAN
+        PLAN --> OPT
+        OPT --> EXAM
+        EXAM --> SCHED
+
+    end
+
+    USER --> ROOT
+
+    subgraph MCP["Local MCP Server"]
+
+        TOOL1[create_action_plan]
+
+        TOOL2[optimize_task_sequence]
+
+        TOOL3[generate_study_guide]
+
+        TOOL4[schedule_calendar_event]
+
+    end
+
+    PLAN -. Call .-> TOOL1
+    OPT -. Call .-> TOOL2
+    EXAM -. Call .-> TOOL3
+    SCHED -. Call .-> TOOL4
+
+    subgraph STORAGE["Persistent Storage"]
+
+        DB[(intelliorbit.db)]
+
+    end
+
+    TOOL4 --> DB
+
+    subgraph UI["IntelliOrbit Pro Dashboard"]
+
+        PANEL[📊 Dashboard Workspace]
+
+        GRAPH[📈 Orchestration Graph]
+
+        LOG[📜 Execution Stream]
+
+        STATUS[🤖 Agent Status]
+
+    end
+
+    ROOT --> PANEL
+    ROOT --> GRAPH
+    ROOT --> LOG
+    ROOT --> STATUS
+```
 # 📂 Project Structure
 
 ```text
